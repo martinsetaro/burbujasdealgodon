@@ -1,0 +1,59 @@
+.containerHeader 
+{
+    max-width: 120rem;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255,255,.6)
+   
+}
+.logo 
+{
+    width: 100%;
+    height: 5rem;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    
+   
+    h2 
+    {
+      
+      font-family: 'outfit';
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 3rem;
+      color: #354595;
+      margin-top: 1rem;
+    }
+    img 
+    {
+        width: 6rem;
+        height: 6rem;
+        margin-right: 2rem;
+    }
+}
+.navegador 
+{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 4rem;
+    a 
+    {
+        font-family: 'outfit';
+        text-decoration: none;
+        transition: all .2s ease-in-out;
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: #354595;
+    }
+}
+
+.navegador a:hover {
+    transform: scale(1.3,1.3);
+}
