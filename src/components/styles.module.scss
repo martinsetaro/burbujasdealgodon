@@ -4,7 +4,7 @@
     height: 9rem;
     display: flex;
     flex-direction: column;
-    background-color: rgb(255, 255,255,.6)
+    background-color: rgba(248, 246, 249, 0.8)
    
 }
 .logo 
@@ -13,7 +13,8 @@
     height: 5rem;
     padding-top: 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
     
    
     h2 
@@ -23,17 +24,18 @@
       text-align: center;
       text-transform: uppercase;
       font-weight: 700;
-      font-size: 3rem;
+      font-size: 2rem;
       color: #354595;
-      margin-top: 1rem;
     }
     img 
     {
-        width: 6rem;
-        height: 6rem;
+        width: 2rem;
+        height: 2rem;
         margin-right: 2rem;
     }
 }
+
+
 .navegador 
 {
     width: 100%;
@@ -41,7 +43,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-right: 4rem;
+   
+    
     a 
     {
         font-family: 'outfit';
@@ -56,4 +59,79 @@
 
 .navegador a:hover {
     transform: scale(1.3,1.3);
+}
+.navegador .inscripciones 
+{
+    background-color: #ff5846;
+    padding: .5rem;
+    border-radius: .5rem;
+    color: #fff;
+}
+
+.containerNosotros 
+{
+    max-width: 120rem;
+    height: auto;
+    background-color: #fff;
+    padding: 1rem;
+}
+.contenedorInfo 
+{
+    width: 90%;
+    height: 40rem;
+    display: flex;
+    margin: 0 auto;
+    background-color: #fff;
+    
+}
+.contenedorInfo .left 
+{
+ width: 80rem;
+ height: 100%;
+ img 
+ {
+    width: 100%;
+    height: 100%;
+ }
+}
+.contenedorInfo .right
+{
+ width: 80rem;
+ height: 100%;
+ background-color: #fcd55c;
+
+ p 
+ {
+    font-family: 'outfit';
+    font-size: 1.4rem;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+ }
+}
+.contenedorInfo .rightBlue
+{
+    background-color: #354595;
+}
+
+.containerFooter 
+{
+    max-width: 120rem;
+    height: 20rem;
+    background-color: #354595;
+    padding-top: 2rem;
+    
+    
+    h2 
+    {
+        font-family: 'outfit';
+        text-align: center;
+        color: #fff;
+    }
+    img 
+    {
+        width: 30rem;
+        height: 15rem;
+        margin-left: 35rem;
+    }
 }

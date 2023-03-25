@@ -4,10 +4,9 @@
 }
 body 
 {
-    background-image: url('../../public/img/backgroundBody.jpg');
+    background-image: url('../../public/img/backgroundJardin.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 200rem;
     background-attachment: fixed;
 }
 html {
