@@ -1,6 +1,6 @@
 .containerIndex 
 {   max-width: 120rem;
-    height: 35rem;
+    height: 41rem;
     display: flex;
     align-items: center;
     
@@ -9,4 +9,21 @@
       margin: 0 auto;
       width: 70rem;
      }
+}
+.containerIndex .tarjetaPresentacion 
+{
+    width: 35rem;
+    height: 18rem;
+    
+    margin-left: 2rem;
+    border-radius: .6rem;
+    h2 
+    {
+        font-size: 4rem;
+        color: #fff;
+        font-family: 'outfit';
+        text-align: center;
+        margin-bottom: -2rem;
+    }
+    
 }

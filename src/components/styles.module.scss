@@ -3,8 +3,8 @@
     max-width: 120rem;
     height: 9rem;
     display: flex;
-    flex-direction: column;
-    background-color: rgba(248, 246, 249, 0.8)
+    
+  
    
 }
 .logo 
@@ -13,25 +13,14 @@
     height: 5rem;
     padding-top: 1rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: start;
     align-items: center;
     
-   
-    h2 
-    {
-      
-      font-family: 'outfit';
-      text-align: center;
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 2rem;
-      color: #354595;
-    }
     img 
     {
-        width: 2rem;
-        height: 2rem;
-        margin-right: 2rem;
+        width: 25rem;
+        height: 8rem;
+        margin-left: 2rem;
     }
 }
 
@@ -39,7 +28,7 @@
 .navegador 
 {
     width: 100%;
-    height: 4rem;
+    height: 5rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -53,7 +42,7 @@
         font-weight: 700;
         cursor: pointer;
         font-size: 1.2rem;
-        color: #354595;
+        color: #fff;
     }
 }
 
@@ -68,12 +57,21 @@
     color: #fff;
 }
 
+
 .containerNosotros 
 {
     max-width: 120rem;
     height: auto;
     background-color: #fff;
     padding: 1rem;
+    h2 
+    {
+        font-size: 3rem;
+        margin-top: 2rem;
+        font-family: 'outfit';
+        text-align: center;
+        color: #2a2a2a;
+    }
 }
 .contenedorInfo 
 {
@@ -111,7 +109,7 @@
 }
 .contenedorInfo .rightBlue
 {
-    background-color: #354595;
+    background-color: #83c7f7;
 }
 
 .containerFooter 

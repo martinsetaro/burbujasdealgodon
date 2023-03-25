@@ -15,6 +15,7 @@ export default function Nosotros() {
 
   return (
     <div className={style.containerNosotros}>
+      <h2>Nuestro servicio escolar</h2>
      <div className={style.contenedorInfo}>
       <div className={style.left}>
         <Image src={pic1} alt="pic1"/>
