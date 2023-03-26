@@ -5,6 +5,7 @@ import Nosotros from '@/components/Nosotros';
 import 'animate.css';
 import Galeria from '@/components/Galeria';
 import Servicios from '@/components/Servicios';
+import Counter from '@/components/Counter';
 
 export default function Index() {
 
@@ -26,6 +27,7 @@ export default function Index() {
       <Servicios/>
       <Nosotros/>
       <Galeria/>
+      <Counter/>
     </Layout>
   )
 }

@@ -15,7 +15,7 @@
 .sliderImg 
 {
     width: 70%;
-    height: 25rem;
+    height: auto;
     margin: 0 auto;
     
     
@@ -23,9 +23,17 @@
 .containerSlider 
 {
     max-width: 120rem;
-    height: 35rem;
-    background-color: rgb(0,0,0,.3);
+    height: auto;
+    background-color:#fff;
     padding-top: 3rem;
+    padding-bottom: 3rem;
+    h2 
+    {
+        font-family: 'outfit';
+        font-size: 3rem;
+        text-align: center;
+        margin-top: 2rem;
+    }
 }
 .containerServicios 
 {
@@ -79,4 +87,14 @@
 .cuatro 
 {
     background-color: #afc4a8;
+}
+.containerCounter 
+{
+    max-width: 120rem;
+    height: 30rem;
+    background-color: #fff;
+    p 
+    {
+        font-size: 3rem;
+    }
 }
