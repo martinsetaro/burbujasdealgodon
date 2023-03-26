@@ -114,9 +114,9 @@
 
 .containerFooter 
 {
-    max-width: 120rem;
-    height: 20rem;
-    background-color: #354595;
+    width: 100%;
+    height: 10rem;
+    background-color: #afc4a8;
     padding-top: 2rem;
     
     
@@ -125,11 +125,27 @@
         font-family: 'outfit';
         text-align: center;
         color: #fff;
+        text-transform: uppercase;
     }
     img 
     {
         width: 30rem;
         height: 15rem;
         margin-left: 35rem;
+    }
+}
+.sociales 
+{
+    width: 40rem;
+    height: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem auto;
+    img 
+    {
+        width: 3rem;
+        height: 3rem;
+        margin-left: 0;
+        margin-right: 0;
     }
 }

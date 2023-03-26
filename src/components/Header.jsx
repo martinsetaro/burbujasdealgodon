@@ -2,6 +2,7 @@ import React from 'react';
 import style from './styles.module.scss';
 import Image from 'next/image';
 import logo from 'public/img/logoFinal.png';
+import Link from 'next/link';
 
 
 
@@ -16,10 +17,10 @@ export default function Header() {
       <Image src={logo} alt="burbujas de algodon"/>
       </div>
       <nav className={style.navegador}>
-        <a href='#'>Inicio</a>
-        <a href='#'>Sobre nosotros</a>
-        <a href='#'>Contacto</a>
-        <a className={style.inscripciones}href='#'>Inscripciones</a>
+      <Link href="/">Inicio</Link>
+        <Link href="/Contacto">Sobre Nosotros</Link>
+        <Link href="/Contacto">Contacto</Link>
+        <Link href='/Inscripciones' className={style.inscripciones}>Inscripciones</Link>
       </nav>
     </div>
   )
