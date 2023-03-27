@@ -6,6 +6,8 @@ import 'animate.css';
 import Galeria from '@/components/Galeria';
 import Servicios from '@/components/Servicios';
 import Counter from '@/components/Counter';
+import Testimoniales from '../components/Testimoniales'
+
 
 export default function Index() {
 
@@ -28,6 +30,8 @@ export default function Index() {
       <Nosotros/>
       <Galeria/>
       <Counter/>
+      <Testimoniales/>
+     
     </Layout>
   )
 }
