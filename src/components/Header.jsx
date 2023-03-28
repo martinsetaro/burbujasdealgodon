@@ -20,7 +20,7 @@ export default function Header() {
       <Link href="/">Inicio</Link>
         <Link href="/Contacto">Sobre Nosotros</Link>
         <Link href="/Contacto">Contacto</Link>
-        <Link href='/Inscripciones' className={style.inscripciones}>Inscripciones</Link>
+        <Link href='/Login' className={style.inscripciones}>Registro formulario</Link>
       </nav>
     </div>
   )

@@ -13,36 +13,71 @@ export default function Contacto() {
 
 const [modalError,setModalError] = useState(false);
 const [modalSuccess,setModalSuccess] = useState(false);
-const [prueba,setPrueba] = useState('')
+const [nombre,setNombre] = useState('')
+const [apellido,setApellido] = useState('')
+const [telefono,setTelefono] = useState('')
+const [email,setEmail] = useState('')
+const [consulta,setConsulta] = useState('')
+
+const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+
+async function enviarForm(){
+
+    const url = 'http://localhost:3000/api/formulario';
+    await fetch(url, {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json"
+        },
+         body:JSON.stringify({
+              
+              "nombre": nombre,
+              "apellido": apellido,
+              "telefono":telefono,
+              "email":email,
+              "nota":consulta
+            })
+        })
+        .then(data => {
+            setModalSuccess(true)
+         setTimeout(() => {
+            window.location.href="/";
+         }, 4000);
+         })
+        .catch(error => {
+         console.error("Error:", error);
+         });
+
+          }
+
+
+
+
+
 
 
 const handlerEnviar = (e)=>{
 e.preventDefault();
 
-if(prueba == ''){
-
-    setModalError(true);
+if(!regex.test(email)){
+    setModalError(true)
     setTimeout(() => {
         setModalError(false)
-    },4000);
+    }, 2000);
+}else if([nombre,apellido,telefono,email,consulta].includes('')){
+    setModalError(true)
+    setTimeout(() => {
+        setModalError(false)
+    }, 2000);
 }else 
 {
-    setModalSuccess(true);
-    setTimeout(() => {
-        setModalSuccess(false)
-    },4000);
-
-}
-
+    enviarForm();
     
-
-
 }
 
 
-
-
-
+}
 
 
   return (
@@ -55,16 +90,24 @@ if(prueba == ''){
             <form className={style.form}>
                 <label>Nombre</label>
                 <input 
-                onChange={(e)=> setPrueba(e.target.value)}
+                onChange={(e)=> setNombre(e.target.value)}
                 type="text" placeholder="Ingrese su nombre"/>
                 <label>Apellido</label>
-                <input type="text" placeholder="Ingrese su nombre"/>
+                <input 
+                onChange={(e)=> setApellido(e.target.value)}
+                type="text" placeholder="Ingrese su nombre"/>
                 <label>Telefono</label>
-                <input type="text" placeholder="Ingrese su nombre"/>
+                <input
+                onChange={(e)=> setTelefono(e.target.value)} 
+                type="text" placeholder="Ingrese su nombre"/>
                 <label>Email</label>
-                <input type="text" placeholder="Ingrese su nombre"/>
+                <input 
+                onChange={(e)=> setEmail(e.target.value)}
+                type="text" placeholder="Ingrese su nombre"/>
                 <label>Consulta</label>
-                <textarea rows="4" cols="50"></textarea>
+                <textarea
+                onChange={(e)=> setConsulta(e.target.value)}
+                rows="4" cols="50"></textarea>
                 <button
                 onClick={handlerEnviar}
                 className={style.btn}
@@ -92,4 +135,5 @@ if(prueba == ''){
 
     </Layout>
   )
-}
+
+  }

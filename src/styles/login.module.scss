@@ -1,0 +1,121 @@
+.containerLogin 
+{
+    max-width: 120rem;
+    height: auto;
+    background-color: #fff;
+    padding:4rem 2rem;
+    h2 
+    {
+        font-family: 'outfit';
+        text-align: center;
+        color: #525252;
+        
+    }
+}
+.containerLogin form 
+{
+    width: 30rem;
+    height: auto;
+    display: flex;
+    margin: 0 auto ;
+    flex-direction: column;
+    font-family: 'outfit';
+    input 
+    {
+        height: 2rem;
+        outline: none;
+        border: .1rem solid #dddcdc;
+        border-radius: .3rem;
+        margin-bottom: 1rem;
+        padding-left: .5rem;
+    }
+    label 
+    {
+        margin-bottom: .5rem;
+    }
+   
+}
+.btn 
+{
+    background-color: #afc4a8;
+    height: 2.5rem;
+    width: 100%;
+    border: none;
+    border-radius: .3rem;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+}
+.btn:hover 
+{
+    background-color: #fff;
+    color: #afc4a8;
+    border: .1rem solid #afc4a8;
+}
+.out 
+{
+    width: 20%;
+    margin-left: 2rem;
+    cursor: pointer;
+
+}
+
+.sinRegistro 
+{
+    height: 20rem;
+    background-color: #fff;
+    margin-bottom: 0;
+    
+}
+.containerRegistro
+{
+    max-width: 120rem;
+    height: auto;
+    background-color: #fff;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    h2 
+    {
+        font-family: 'outfit';
+        text-align: center;
+        color: #525252;
+        
+    }
+
+}
+.registros 
+{
+    width: 40rem;
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.cardRegistro 
+{
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    line-height: .7rem;
+    border: .1rem solid #afc4a8;
+    h3 
+    {
+        font-family: 'outfit';
+        color: #7f8e7a; 
+        font-size: 1rem;
+    }
+    p 
+    {
+        font-family: 'outfit';
+        color: #7f8e7a;
+        font-style: italic;
+
+    }
+    span 
+    {
+        color: #525252;
+    }
+}

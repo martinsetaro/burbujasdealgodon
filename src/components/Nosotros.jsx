@@ -21,14 +21,18 @@ export default function Nosotros() {
         <Image src={pic1} alt="pic1"/>
       </div>
       <div className={style.right}>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, id totam. Corporis voluptates veritatis fugiat cupiditate reprehenderit optio atque culpa praesentium sunt at. Aut fugit soluta itaque voluptatum similique! Aperiam.
-      Ipsa quisquam error laboriosam ratione voluptatem molestiae perferendis vitae, id adipisci quod quidem distinctio provident asperiores? Aliquid vitae, sint quis nam culpa voluptatibus, voluptas modi, eum quae facere mollitia sit.</p>
+      <p>En nuestro jardín, creemos que la educación y el aprendizaje deben ser divertidos y emocionantes para los niños. Es por eso que hemos creado un ambiente acogedor y lleno de juegos y actividades, para que nuestros pequeños estudiantes puedan aprender jugando y disfrutando al mismo tiempo.
+
+       En nuestro jardín, contamos con un equipo altamente capacitado de maestros y profesionales de la educación infantil, que estarán encantados de guiar y apoyar a sus hijos durante su proceso de aprendizaje..</p>
       </div>
       </div>
       <div className={style.contenedorInfo}>
       <div className={`${style.right}  ${style.rightBlue}`}>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, id totam. Corporis voluptates veritatis fugiat cupiditate reprehenderit optio atque culpa praesentium sunt at. Aut fugit soluta itaque voluptatum similique! Aperiam.
-      Ipsa quisquam error laboriosam ratione voluptatem molestiae perferendis vitae, id adipisci quod quidem distinctio provident asperiores? Aliquid vitae, sint quis nam culpa voluptatibus, voluptas modi, eum quae facere mollitia sit.</p>
+      <p>Además, ofrecemos una variedad de programas educativos para cada edad y nivel de desarrollo, desde actividades motoras y de estimulación temprana para los más pequeños, hasta programas de preescolar más estructurados para preparar a los niños para su futuro académico.
+
+      No solo eso, también contamos con un amplio espacio al aire libre, para que los niños puedan disfrutar del sol y la naturaleza mientras aprenden y juegan.
+
+      ¿Por qué deberías inscribir a tu hijo en nuestro jardín de infantes? Porque aquí, su hijo tendrá la oportunidad de aprender y desarrollarse en un ambiente divertido, seguro y emocionante. ¡No esperes más, únete a nuestra familia educativa hoy!.</p>
       </div>
       <div className={style.left}>
         <Image src={pic2} alt="pic2"/>
