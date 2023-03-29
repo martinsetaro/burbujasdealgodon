@@ -1,4 +1,4 @@
-import { pool } from "../../../../config/datab";
+import poolObject from "../../../../config/datab";
 
 
 export default async function handler(req,res){
@@ -13,6 +13,7 @@ export default async function handler(req,res){
 }
 
 const getTestimonios = async (req,res)=>{
+  const pool = await poolObject.pool;
 const [result] = await pool.query('SELECT * FROM formulario');
 console.log(result);
 return res.status(200).json(result)
@@ -21,7 +22,7 @@ return res.status(200).json(result)
 }
 
 const saveNota = async ( req,res) => {
-
+  const pool = await poolObject.pool;
 const { id, nombre , apellido , telefono , email, nota } = req.body
 const [result] = await pool.query('INSERT INTO formulario SET ?',{
   id,
