@@ -2,7 +2,7 @@ import React, { useEffect, useState , useRef } from 'react';
 import style from '../styles/contacto.module.scss';
 import Image from 'next/image';
 import Layout from '@/components/Layout';
-import logo from '../../public/img/logoFinal.png';
+import logo from '../../public/img/logofinal.png';
 import error from '../../public/img/error2.png'
 import success from '../../public/img/success.png'
 import 'animate.css';
