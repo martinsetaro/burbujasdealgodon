@@ -37,7 +37,7 @@ const Registros = () => {
        <div className={style.registros}>
           {datos.map( item => {
             return(
-              <div className={style.cardRegistro}>
+              <div className={style.cardRegistro} key={item.nombre}>
                 <h3>Nombre: <span>{item.nombre} </span></h3>
                 <h3>Apellido: <span>{item.apellido} </span></h3>
                 <h3>Telefono: <span>{item.telefono} </span></h3>

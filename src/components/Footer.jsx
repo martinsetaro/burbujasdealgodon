@@ -13,7 +13,7 @@ export default function Footer() {
   return (
 
     <div className={style.containerFooter}>
-      <h2>Jardin de infantes " Burbujas de algodón"</h2>
+      <h2>Jardin de infantes &quot;Burbujas de algodón&quot;</h2>
       <div className={style.sociales}>
         <Image src={facebook} alt="facebook" width={200} height={200}/>
         <Image src={instagram} alt="instagram" width={200} height={200}/>

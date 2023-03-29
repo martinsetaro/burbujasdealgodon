@@ -26,7 +26,7 @@ const Testimoniales = () => {
             }else{
 
 
-        await fetch("/api/testimonios", {
+        await fetch("http://localhost:3000/api/testimonios", {
         method: "POST",
         headers: {
         "Content-Type": "application/json"
@@ -95,7 +95,7 @@ postear();
                 <div className={style.cardTestimonios} key={item.nombre}>
                  <Image src={star} alt="star"/>
                  <h2>{item.nombre}</h2>
-                 <p>" {item.nota} "</p>
+                 <p>&quot; {item.nota} &quot;</p>
                 </div>
             )
         })}
