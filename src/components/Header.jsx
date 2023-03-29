@@ -1,7 +1,6 @@
 import React from 'react';
 import style from './styles.module.scss';
 import Image from 'next/image';
-import logo from 'public/img/logoFinal.png';
 import Link from 'next/link';
 
 
