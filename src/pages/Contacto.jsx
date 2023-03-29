@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState , useRef } from 'react';
 import style from '../styles/contacto.module.scss';
 import Image from 'next/image';
 import Layout from '@/components/Layout';
@@ -6,6 +6,11 @@ import logo from '../../public/img/logoFinal.png';
 import error from '../../public/img/error2.png'
 import success from '../../public/img/success.png'
 import 'animate.css';
+import emailjs from '@emailjs/browser';
+
+
+
+
 
 
 export default function Contacto() {
@@ -18,9 +23,12 @@ const [apellido,setApellido] = useState('')
 const [telefono,setTelefono] = useState('')
 const [email,setEmail] = useState('')
 const [consulta,setConsulta] = useState('')
-
+const form = useRef(); 
 const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
+
+
+// hacer el POST del formulario
 
 async function enviarForm(){
 
@@ -41,9 +49,10 @@ async function enviarForm(){
         })
         .then(data => {
             setModalSuccess(true)
-         setTimeout(() => {
-            window.location.href="/";
-         }, 4000);
+            sendCorreo();
+            setTimeout(() => {
+                window.location.reload();
+            }, 3000);
          })
         .catch(error => {
          console.error("Error:", error);
@@ -51,7 +60,15 @@ async function enviarForm(){
 
           }
 
-
+// enviar correo electronico
+const sendCorreo = () => {
+    emailjs.sendForm('service_phazy5k', 'template_v2w2uv7', form.current, 'PdiULx1w49pbi0vUP')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+}
 
 
 
@@ -73,6 +90,7 @@ if(!regex.test(email)){
 }else 
 {
     enviarForm();
+   
     
 }
 
@@ -87,27 +105,27 @@ if(!regex.test(email)){
           <div className={style.containerForm}>
             <Image src={logo} alt="logo"/>
             <h2>Formulario de contacto</h2>
-            <form className={style.form}>
+            <form className={style.form} ref={form} >
                 <label>Nombre</label>
                 <input 
                 onChange={(e)=> setNombre(e.target.value)}
-                type="text" placeholder="Ingrese su nombre"/>
+                type="text" placeholder="Ingrese su nombre" name='nombre'/>
                 <label>Apellido</label>
                 <input 
                 onChange={(e)=> setApellido(e.target.value)}
-                type="text" placeholder="Ingrese su nombre"/>
+                type="text" placeholder="Ingrese su nombre" name='apellido'/>
                 <label>Telefono</label>
                 <input
                 onChange={(e)=> setTelefono(e.target.value)} 
-                type="text" placeholder="Ingrese su nombre"/>
+                type="text" placeholder="Ingrese su nombre" name='telefono'/>
                 <label>Email</label>
                 <input 
                 onChange={(e)=> setEmail(e.target.value)}
-                type="text" placeholder="Ingrese su nombre"/>
+                type="text" placeholder="Ingrese su nombre" name='email'/>
                 <label>Consulta</label>
                 <textarea
                 onChange={(e)=> setConsulta(e.target.value)}
-                rows="4" cols="50"></textarea>
+                rows="4" cols="50" name='consulta'></textarea>
                 <button
                 onClick={handlerEnviar}
                 className={style.btn}
