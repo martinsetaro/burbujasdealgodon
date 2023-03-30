@@ -32,7 +32,7 @@ const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 async function enviarForm(){
 
-    const url = 'http://localhost:3000/api/formulario';
+    const url = 'https://dbburbujas-production.up.railway.app/formulario';
     await fetch(url, {
         method: "POST",
         headers: {

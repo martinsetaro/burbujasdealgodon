@@ -1,6 +1,7 @@
 import React, { useState , useEffect } from 'react';
 import Layout from '../components/Layout';
 import style from '../styles/login.module.scss';
+import axios from 'axios';
 
 
 
@@ -12,9 +13,21 @@ const Registros = () => {
 
   async function getDatos(){
   
-   const response = await fetch('http://localhost:3000/api/formulario')
-   const respuesta = await response.json();
-   setDatos(respuesta); 
+    try {
+      const response = await axios.get('https://dbburbujas-production.up.railway.app/formulario',{
+        headers:{
+         
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin':'*'
+
+        }
+      });
+      const data = response.data;
+      console.log(data);
+      setDatos(data)
+    } catch (error) {
+      console.error(error);
+    }
   
   }
   

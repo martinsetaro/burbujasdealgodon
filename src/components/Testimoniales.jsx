@@ -14,7 +14,7 @@ const Testimoniales = () => {
     const [load,setLoad] = useState(false)
 
        async function datos(){
-       const recibir = await fetch('http://localhost:3000/api/testimonios')
+       const recibir = await fetch('https://dbburbujas-production.up.railway.app/testimonios')
        const data = await recibir.json()
        setTest(data)
        }
@@ -26,7 +26,7 @@ const Testimoniales = () => {
             }else{
 
 
-        await fetch("http://localhost:3000/api/testimonios", {
+        await fetch("https://dbburbujas-production.up.railway.app/testimonios", {
         method: "POST",
         headers: {
         "Content-Type": "application/json"
@@ -40,7 +40,7 @@ const Testimoniales = () => {
         .then(data => {
          setTimeout(() => {
             window.location.reload();
-         }, 2000);
+         }, 1000);
          })
         .catch(error => {
          console.error("Error:", error);
