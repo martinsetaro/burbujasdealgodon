@@ -24,21 +24,9 @@ if(document.documentElement.scrollTop > 3000){
 
 
 
-  
-   
-    
-  
-
-
-
-
-
-
-
-
   return (
     <div  className={style.containerCounter}>
-      {!load ? null : <div className={`${style.contador} animate__animated animate__flipInX`}>
+      {!load ? null : <div className={`${style.contador} animate__animated animate__fadeInUp`}>
         <div className={style.tarjetaContador}>
         <h2>Horas de estudio</h2>
        <span><CountUp 

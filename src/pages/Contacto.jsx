@@ -117,7 +117,7 @@ if(!regex.test(email)){
                 <label>Telefono</label>
                 <input
                 onChange={(e)=> setTelefono(e.target.value)} 
-                type="text" placeholder="Ingrese su nombre" name='telefono'/>
+                type="number" placeholder="Ingrese su nombre" name='telefono'/>
                 <label>Email</label>
                 <input 
                 onChange={(e)=> setEmail(e.target.value)}

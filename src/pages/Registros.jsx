@@ -60,7 +60,6 @@ const Registros = () => {
             )
           })}
        </div>}
-       <button className={`${style.btn} ${style.out}`}>Log Out</button>
       </div>
     </Layout>
   )
