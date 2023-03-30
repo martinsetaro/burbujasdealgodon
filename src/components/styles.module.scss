@@ -147,9 +147,11 @@
  height: 100%;
  background-color: #fcd55c;
  line-height: 2rem;
+ border-bottom: .1rem solid #2a2a2a;
  @media(max-width:800px){
   width: 100%; 
-  height: auto;         
+  height: auto;
+  background-color: #fff;        
  }
 
  p 
@@ -161,14 +163,19 @@
     font-weight: 900;
     padding: 2rem;
     @media (max-width:800px){
-    font-size: .8rem;
-    text-align: left;
+    font-size: 1.2rem;
+    color: #2a2a2a;
+    font-weight: 300;
+    padding: .4rem;
     }
  }
 }
 .contenedorInfo .rightBlue
 {
     background-color: #83c7f7;
+    @media (max-width:800px){
+        background-color: #fff;
+    }
 }
 
 .containerFooter 
