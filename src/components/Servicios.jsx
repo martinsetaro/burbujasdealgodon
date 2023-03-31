@@ -23,7 +23,7 @@ export default function Servicios() {
           <Image src={libro} alt="logo" />
           <h2>Jornada completa</h2>
           <p>
-          El término "jornada completa" se refiere a un horario de trabajo o escolar que cubre todo el día, desde la mañana hasta la tarde. Por lo general, implica trabajar o estudiar durante un período de ocho horas o más. Las jornadas completas pueden ser beneficiosas para aquellos que buscan maximizar su tiempo productivo y obtener un salario completo, o para los estudiantes que necesitan cumplir con los requisitos académicos en un período de tiempo más corto. Sin embargo, es importante tener en cuenta que trabajar o estudiar durante largos períodos de tiempo puede ser agotador y afectar la salud y el bienestar de las personas.
+          El término &quot;jornada completa&quot; se refiere a un horario de trabajo o escolar que cubre todo el día, desde la mañana hasta la tarde. Por lo general, implica trabajar o estudiar durante un período de ocho horas o más. Las jornadas completas pueden ser beneficiosas para aquellos que buscan maximizar su tiempo productivo y obtener un salario completo, o para los estudiantes que necesitan cumplir con los requisitos académicos en un período de tiempo más corto. Sin embargo, es importante tener en cuenta que trabajar o estudiar durante largos períodos de tiempo puede ser agotador y afectar la salud y el bienestar de las personas.
           </p>
         </div>
         <div className={`${style.tarjeta} ${style.tres}`}>
