@@ -231,13 +231,11 @@
 }
 .containerTestimoniales 
 {
-    width: 100%;
+    max-width: 120rem;
     height: auto;
     background-color: #fff;
     padding: 2rem;
-    @media(max-width:800px){
-     width: 83%;      
-    }
+   
     h2 
     {
         font-family: 'outfit';
@@ -275,6 +273,10 @@
   justify-content: center;
   margin-top: 2rem;
   box-shadow:  0 .2rem .2rem #afc4a8;
+  @media (max-width:800px){
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
   
   h2 
   {

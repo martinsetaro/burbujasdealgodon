@@ -44,6 +44,8 @@ if(user.toUpperCase() === "BURBUJAS" && pass.toUpperCase() === "USER"){
     <Layout>
       <div className={style.containerLogin}>
           <h2>Intranet</h2>
+          <h5>Usuario: burbujas</h5>
+          <h5>Password: user</h5>
           <form>
             <label>Usuario</label>
             <input 

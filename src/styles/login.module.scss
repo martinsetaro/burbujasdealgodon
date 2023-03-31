@@ -4,16 +4,15 @@
     height: auto;
     background-color: #fff;
     padding:4rem 2rem;
-    @media (max-width:800px){
-     width: 83%;      
-    }
-    h2 
+    
+    h2,h5 
     {
         font-family: 'outfit';
         text-align: center;
         color: #525252;
         
     }
+   
 }
 .containerLogin form 
 {

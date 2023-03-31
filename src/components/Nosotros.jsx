@@ -1,8 +1,8 @@
 import React from 'react'
 import style from './styles.module.scss';
 import Image from 'next/image';
-import pic1 from '../../public/img/pic1.jpg'
-import pic2 from '../../public/img/planetas.jpg'
+import pic1 from '../../public/img/pic1.avif'
+import pic2 from '../../public/img/planetas.avif'
 
 
 

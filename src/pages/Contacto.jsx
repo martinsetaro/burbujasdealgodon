@@ -5,6 +5,7 @@ import Layout from '@/components/Layout';
 import logo from '../../public/img/logofinal.png';
 import error from '../../public/img/error2.png'
 import success from '../../public/img/success.png'
+import errorEmail from '../../public/img/errorEmail.png'
 import 'animate.css';
 import emailjs from '@emailjs/browser';
 
@@ -18,6 +19,7 @@ export default function Contacto() {
 
 const [modalError,setModalError] = useState(false);
 const [modalSuccess,setModalSuccess] = useState(false);
+const [modalEmail,setModalEmail] = useState(false);
 const [nombre,setNombre] = useState('')
 const [apellido,setApellido] = useState('')
 const [telefono,setTelefono] = useState('')
@@ -78,15 +80,15 @@ const handlerEnviar = (e)=>{
 e.preventDefault();
 
 if(!regex.test(email)){
-    setModalError(true)
+    setModalEmail(true)
     setTimeout(() => {
-        setModalError(false)
-    }, 2000);
+        setModalEmail(false)
+    }, 3000);
 }else if([nombre,apellido,telefono,email,consulta].includes('')){
     setModalError(true)
     setTimeout(() => {
         setModalError(false)
-    }, 2000);
+    }, 3000);
 }else 
 {
     enviarForm();
@@ -113,15 +115,15 @@ if(!regex.test(email)){
                 <label>Apellido</label>
                 <input 
                 onChange={(e)=> setApellido(e.target.value)}
-                type="text" placeholder="Ingrese su nombre" name='apellido'/>
+                type="text" placeholder="Ingrese su apellido" name='apellido'/>
                 <label>Telefono</label>
                 <input
                 onChange={(e)=> setTelefono(e.target.value)} 
-                type="number" placeholder="Ingrese su nombre" name='telefono'/>
+                type="number" placeholder="Ingrese su telefono" name='telefono'/>
                 <label>Email</label>
                 <input 
                 onChange={(e)=> setEmail(e.target.value)}
-                type="text" placeholder="Ingrese su nombre" name='email'/>
+                type="text" placeholder="Ingrese su email" name='email'/>
                 <label>Consulta</label>
                 <textarea
                 onChange={(e)=> setConsulta(e.target.value)}
@@ -139,13 +141,18 @@ if(!regex.test(email)){
             <Image src={error} alt="error"/>
             <h2>Ooopss!</h2>
             <h2>Intentalo de nuevo!</h2>
-            <h2>Algun dato es incorrecto.</h2>
+            <h2>Los campos no pueden ir vacios.</h2>
         </div> : null}
         {modalSuccess ? <div className={`${style.modal} animate__animated animate__fadeInDown`}>
             <Image src={success} alt="error"/>
             <h2>Muy Bien!</h2>
             <h2>Ya recibimos tu mensaje!</h2>
             <h2>Pronto nos comunicaremos contigo.</h2>
+        </div> : null}
+        {modalEmail ? <div className={`${style.modal} animate__animated animate__fadeInDown`}>
+            <Image src={errorEmail} alt="error"/>
+            <h2>Ooopss!</h2>
+            <h2>Parece que tu email no es correcto!</h2>
         </div> : null}
 
 
