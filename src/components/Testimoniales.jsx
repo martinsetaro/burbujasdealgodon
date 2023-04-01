@@ -69,7 +69,7 @@ postear();
   return (
     <div className={style.containerTestimoniales}>
       <h2>Testimoniales</h2>
-      {!load ? null : <div className={`${style.modalTestimoniales} animate__animated animate__zoomIn`}>
+      {load && <div className={`${style.modalTestimoniales} animate__animated animate__zoomIn`}>
         <form>
             <label>Nombre</label>
             <input 
