@@ -31,7 +31,7 @@ export default function Nosotros() {
 
       ¿Por qué deberías inscribir a tu hijo en nuestro jardín de infantes? Porque aquí, su hijo tendrá la oportunidad de aprender y desarrollarse en un ambiente divertido, seguro y emocionante. ¡No esperes más, únete a nuestra familia educativa hoy!.</p>
       </div>
-      <div className={style.left}>
+      <div className={style.left}> 
         <Image src={pic2} alt="pic2"  loading='lazy'/>
       </div>
 

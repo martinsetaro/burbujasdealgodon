@@ -93,7 +93,7 @@ postear();
         {test.map( item => {
             return(
                 <div className={style.cardTestimonios} key={item.nombre}>
-                 <Image src={star} alt="star"/>
+                 <Image src={star} alt="star" loading='lazy'/>
                  <h2>{item.nombre}</h2>
                  <p>&quot; {item.nota} &quot;</p>
                 </div>
