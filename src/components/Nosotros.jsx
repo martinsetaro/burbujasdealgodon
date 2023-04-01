@@ -6,10 +6,7 @@ import pic2 from '../../public/img/planetas.webp'
 
 
 
-
 export default function Nosotros() {
-
-
 
 
 
@@ -18,7 +15,7 @@ export default function Nosotros() {
       <h2 id='sobreNosotros'>Nuestro servicio escolar</h2>
      <div className={style.contenedorInfo}>
       <div className={style.left}>
-        <Image src={pic1} alt="pic1"/>
+        <Image src={pic1} alt="pic" loading='lazy'/>
       </div>
       <div className={style.right}>
       <p>En nuestro jardín, creemos que la educación y el aprendizaje deben ser divertidos y emocionantes para los niños. Es por eso que hemos creado un ambiente acogedor y lleno de juegos y actividades, para que nuestros pequeños estudiantes puedan aprender jugando y disfrutando al mismo tiempo.
@@ -35,7 +32,7 @@ export default function Nosotros() {
       ¿Por qué deberías inscribir a tu hijo en nuestro jardín de infantes? Porque aquí, su hijo tendrá la oportunidad de aprender y desarrollarse en un ambiente divertido, seguro y emocionante. ¡No esperes más, únete a nuestra familia educativa hoy!.</p>
       </div>
       <div className={style.left}>
-        <Image src={pic2} alt="pic2"/>
+        <Image src={pic2} alt="pic2"  loading='lazy'/>
       </div>
 
       
