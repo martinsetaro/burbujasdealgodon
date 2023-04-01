@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <div className={style.containerHeader}>
       <div className={style.logo}>
-      <Image src={logo} alt="burbujas de algodon" loading='lazy'/>
+      <Image src={logo} alt="burbujas de algodon" priority/>
       </div>
       <nav className={style.navegador}>
       <Link href="/">Inicio</Link>
