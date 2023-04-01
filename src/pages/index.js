@@ -16,7 +16,9 @@ export default function Index() {
 
 
   return (
-    <Layout>
+    <Layout
+    title="Jardin de infantes Burbujas de algodon"
+    >
 
 
       <div className={style.containerIndex}>

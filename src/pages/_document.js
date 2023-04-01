@@ -10,7 +10,7 @@ export default function Document() {
           <meta name="keywords" content="jardin,infantes,inscripcion,formulario,testimonios,profesionales,maestras,actividades" />
           <meta name="author" content="Martin Setaro." />
           <link rel="icon" href="/icono.ico" />
-          <title>Jardin de infantes Burbuja de algodon</title>
+          
       </Head> 
       
       
