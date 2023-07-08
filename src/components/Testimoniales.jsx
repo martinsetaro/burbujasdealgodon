@@ -14,7 +14,7 @@ const Testimoniales = () => {
     const [load,setLoad] = useState(false)
 
        async function datos(){
-       const recibir = await fetch('https://dbburbujas-production.up.railway.app/testimonios')
+       const recibir = await fetch('https://dbburbujas-martinsetaro.vercel.app/testimonios')
        const data = await recibir.json()
        setTest(data)
        }
@@ -26,7 +26,7 @@ const Testimoniales = () => {
             }else{
 
 
-        await fetch("https://dbburbujas-production.up.railway.app/testimonios", {
+        await fetch("https://dbburbujas-martinsetaro.vercel.app/testimonios", {
         method: "POST",
         headers: {
         "Content-Type": "application/json"
