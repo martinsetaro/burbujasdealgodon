@@ -20,46 +20,27 @@ const Testimoniales = () => {
        setTest(data)
        }
 
-       function postear() {
+       async function postear() {
              
-        axios.post('https://ultimoburbujas.vercel.app/testimonios', {
-          nombre: nombre,
-          nota: nota
-        })
-        .then((response) => {
-          setTimeout(() => {
-               window.location.reload();
-              }, 1000);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-
- 
-
-
-
-
-
-
       
-          // try {
-          //   await axios.post("https://ultimoburbujas.vercel.app/testimonios", {
-          //     nombre: nombre,
-          //     nota: nota
-          //   }, {
-          //     headers: {
-          //       "Content-Type": "application/json",
-
-          //     }
-          //   });
       
-          //   setTimeout(() => {
-          //     window.location.reload();
-          //   }, 1000);
-          // } catch (error) {
-          //   console.error("Error:", error);
-          // }
+          try {
+            await axios.post("https://ultimoburbujas.vercel.app/testimonios/add", {
+              nombre: nombre,
+              nota: nota
+            }, {
+              headers: {
+                "Content-Type": "application/json",
+
+              } 
+            });
+      
+            setTimeout(() => {
+              window.location.reload();
+            }, 1000);
+          } catch (error) {
+            console.error("Error:", error);
+          }
         }
       
    
