@@ -29,7 +29,10 @@ const Testimoniales = () => {
         await fetch("https://ultimoburbujas.vercel.app/testimonios", {
         method: "POST",
         headers: {
-        "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+          "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
         },
          body:JSON.stringify({
               
