@@ -31,6 +31,7 @@ const Testimoniales = () => {
             }, {
               headers: {
                 "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "https://burbujasdealgodon.vercel.app"
               }
             });
       
