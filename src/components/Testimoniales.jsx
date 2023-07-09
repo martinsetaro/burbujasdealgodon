@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import style from '../components/styles.module.scss'
 import star from '../../public/img/star.png'
 import Image from 'next/image'
+import axios from 'axios'
 import 'animate.css'
 
 
@@ -19,39 +20,31 @@ const Testimoniales = () => {
        setTest(data)
        }
 
-        async function postear (){
-
-            if([nombre,nota].includes('')){
-                alert("hay campos vacios")
-            }else{
-
-
-        await fetch("https://ultimoburbujas.vercel.app/testimonios", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-          "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
-        },
-         body:JSON.stringify({
-              
-              "nombre": nombre,
-              "nota": nota 
-            })
-        })
-        .then(data => {
-         setTimeout(() => {
-            window.location.reload();
-         }, 1000);
-         })
-        .catch(error => {
-         console.error("Error:", error);
-         });
-
+       async function postear() {
+        if ([nombre, nota].includes('')) {
+          alert("hay campos vacios");
+        } else {
+          try {
+            await axios.post("https://ultimoburbujas.vercel.app/testimonios", {
+              nombre: nombre,
+              nota: nota
+            }, {
+              headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+                "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+              }
+            });
+      
+            setTimeout(() => {
+              window.location.reload();
+            }, 1000);
+          } catch (error) {
+            console.error("Error:", error);
           }
-         
         }
+      }
    
    
 useEffect(()=>{
