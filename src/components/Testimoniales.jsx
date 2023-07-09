@@ -21,9 +21,7 @@ const Testimoniales = () => {
        }
 
        async function postear() {
-        if ([nombre, nota].includes('')) {
-          alert("hay campos vacios");
-        } else {
+      
           try {
             await axios.post("https://ultimoburbujas.vercel.app/testimonios", {
               nombre: nombre,
@@ -31,7 +29,6 @@ const Testimoniales = () => {
             }, {
               headers: {
                 "Content-Type": "application/json",
-                "Access-Control-Allow-Origin": "https://burbujasdealgodon.vercel.app"
               }
             });
       
@@ -42,7 +39,7 @@ const Testimoniales = () => {
             console.error("Error:", error);
           }
         }
-      }
+      
    
    
 useEffect(()=>{
@@ -53,8 +50,12 @@ datos();
 
 const handlerEnviar = (e)=>{
 e.preventDefault();
+if ([nombre, nota].includes('')) {
+  alert("hay campos vacios");
+} else {
 
 postear();
+}
 
 }
 
@@ -86,7 +87,7 @@ postear();
       <div className={style.containerCardTestimonios}>
         {test.map( item => {
             return(
-                <div className={style.cardTestimonios} key={item.nombre}>
+                <div className={style.cardTestimonios} key={item.Id}>
                  <Image src={star} alt="star" loading='lazy'/>
                  <h2>{item.nombre}</h2>
                  <p>&quot; {item.nota} &quot;</p>
