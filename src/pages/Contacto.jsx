@@ -34,7 +34,7 @@ const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 async function enviarForm(){
 
-    const url = 'https://dbburbujas-martinsetaro.vercel.app/formulario';
+    const url = 'https://ultimoburbujas.vercel.app/formulario';
     await fetch(url, {
         method: "POST",
         headers: {

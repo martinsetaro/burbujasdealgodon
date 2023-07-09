@@ -14,7 +14,7 @@ const Registros = () => {
   async function getDatos(){
   
     try {
-      const response = await axios.get('https://dbburbujas-martinsetaro.vercel.app/formulario',{
+      const response = await axios.get('https://ultimoburbujas.vercel.app/formulario',{
         headers:{
          
         'Content-Type': 'application/json',
