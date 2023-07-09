@@ -11,24 +11,15 @@ const Registros = () => {
   const [datos,setDatos] = useState([]);
   const [load,setLoad] = useState(true);
 
-  async function getDatos(){
-  
+  async function getDatos() {
     try {
-      const response = await axios.get('https://ultimoburbujas.vercel.app/formulario',{
-        headers:{
-         
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin':'*'
-
-        }
-      });
+      const response = await axios.get('https://ultimoburbujas.vercel.app/formulario');
       const data = response.data;
       console.log(data);
-      setDatos(data)
+      setDatos(data);
     } catch (error) {
       console.error(error);
     }
-  
   }
   
   useEffect(()=>{
