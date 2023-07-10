@@ -13,7 +13,7 @@ const Registros = () => {
 
   async function getDatos() {
     try {
-      const response = await axios.get('https://ultimoburbujas.vercel.app/formulario');
+      const response = await axios.get('https://databaseburbujas.onrender.com/formulario');
       const data = response.data;
       console.log(data);
       setDatos(data);

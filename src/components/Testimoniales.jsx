@@ -15,7 +15,7 @@ const Testimoniales = () => {
     const [load,setLoad] = useState(false)
 
        async function datos(){
-       const recibir = await fetch('https://ultimoburbujas.vercel.app/testimonios')
+       const recibir = await fetch('https://databaseburbujas.onrender.com/testimonios')
        const data = await recibir.json()
        setTest(data)
        }
@@ -25,7 +25,7 @@ const Testimoniales = () => {
       
       
           try {
-            await axios.post("https://ultimoburbujas.vercel.app/testimonios/add", {
+            await axios.post("https://databaseburbujas.onrender.com/testimonios/add", {
               nombre: nombre,
               nota: nota
             }, {
